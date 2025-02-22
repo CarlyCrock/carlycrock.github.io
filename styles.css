@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 150vh;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  background-image: url('backgroundimage.png'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+}
+
+/* Ensures main content takes available space between header and footer */
+main {
+  flex: 0; /* Makes main content take up remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  padding: 10px 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center; /* Keeps menu on the left and social icons on the right */
+  align-items: center;
+  max-width: 1300px;
+  margin: 10px auto;
+  padding: 0px 20px;
+  ;
+}
+header h1 {
+  font-family: 'lucida sans', sans-serif;
+  font-style: italic;
+  text-shadow: #578088 2px 2px 4px;
+}
+/* Internal Menu */
+.menu-container {
+  flex: 1; 
+  justify-content: center;/* Ensures it takes available space */
+}
+
+.internal-menu ul {
+  list-style: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  display: flex;
+  gap: 350px; /* Increases space between menu items */
+  padding: 10;
+  margin: auto;
+}
+
+.internal-menu ul li a {
+  text-decoration: none;
+  font-family: 'roboto',sans-serif;
+  color: rgb(7, 7, 7);
+  font-size: 22px;
+  padding: 10px 15px;
+  transition: 0.3s;
+  text-shadow: 0px 0px 8px #B35A3E;
+  gap: 400px;
+}
+
+.internal-menu ul li a:hover {
+  background-color: #74948C;
+  border-radius: 5px;
+}
+
+/* Social Icons */
+.social-container {display: flex;
+justify-content: center;
+flex: 1; /* Ensures spacing between menu and social icons */
+text-align: right;}
+
+.social-nav {
+  display: flex;
+  gap: 40px; /* Increases space between social icons */
+}
+
+.social-nav a {
+  color: #ffffff;
+  font-size: 2.5em;
+  transition: color 0.3s;
+  text-shadow: 0px 0px 8px #B35A3E;
+}
+
+.social-nav a:hover {
+  color: #578088; /* Steel Teal */
+}
+/* messy genes logo */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px #B35A3E;
+}
+
+
+/* Sections */
+.section {
+  padding: 20px;
+  text-align: center;
+  background-color: hsl(0, 46%, 75%);
+  margin: 20px auto;
+  max-width: 1000px;
+  border: 1px solid #74948C;
+}
+
+/* Profile Section */
+
+
+/* Subscribe Section */
+#subscribe {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#subscribe input[type="email"] {
+  padding: 15px;
+  border: 2px solid #74948C;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 300px;
+}
+
+#subscribe button {
+  padding: 15px 30px;
+  background-color: #864E3E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#subscribe button:hover {
+  background-color: #B35A3E;
+}
+
+/* Footer */
+footer {
+
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  width: 100%;
+}
+footer .social-nav a {
+  color: #000000;
+}
+
+footer .social-nav a:hover {
+  color: #578088; /* Steel Teal */
+  text-shadow: 0px 0px 8px #FFFFFF; /* White text shadow */
+}
