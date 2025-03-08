@@ -46,7 +46,6 @@ header {
   margin: auto;
   padding: 10px;
 }
-
 /* Internal Menu */
 .menu-container {
   flex: 1;
@@ -70,14 +69,38 @@ header {
   color: rgb(7, 7, 7);
   font-size: 16px;
   padding: 10px 15px;
-  transition: 0.3s;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  font-size: 20px; /* Increases text size on hover */
   text-shadow: 0px 0px 8px #B35A3E;
 }
 
 .internal-menu ul li a:hover {
-  background-color: #74948C;
+   /* Light background effect */
   border-radius: 5px;
+  transform: scale(1.2); /* Enlarges menu items on hover */
 }
+
+/* Social Icons */
+.social-container {
+  display: flex;
+  justify-content: center; /* Centers social icons on larger screens */
+  align-items: center;
+  width: 100%;
+}
+
+.social-nav {
+  display: flex;
+  gap: 40px; /* Space between icons */
+}
+
+.social-nav a {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-nav a:hover {
+  transform: scale(1.2); /* Makes icons bigger on hover */
+}
+
 
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
@@ -89,7 +112,6 @@ header {
 }
 
 /* Social Icons */
-/* Social Icons - Default for Desktop */
 .social-container {
   display: flex;
   justify-content: center; /* Centers social icons on larger screens */
@@ -115,7 +137,6 @@ header {
   }
 }
 
-
 /* Hero Section */
 .hero {
   text-align: center;
@@ -136,49 +157,115 @@ header {
 }
 
 /* Subscribe Section */
-#subscribe {
+.subscribe {
+  text-align: center;
+  background: #f9fcfb00;
+  padding: 20px 20px;
+  color: #000000;
+  text-shadow: 0px 0px 8px #B35A3E;
+    font-family: 'roboto', sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.subscribe h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.fs-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px;
+  background: #fbfbfb00;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
-#subscribe input[type="email"] {
-  padding: 15px;
-  border: 2px solid #74948C;
-  border-radius: 4px;
-  font-size: 1em;
-  width: 90%; /* Full width on smaller screens */
-  max-width: 300px;
+.fs-field {
+  width: 95%;
+  margin-bottom: 15px;
 }
 
-#subscribe button {
-  padding: 15px 30px;
-  background-color: #864E3E;
-  color: #FFFFFF;
+.fs-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'roboto', sans-serif;
+}
+
+.fs-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px transparent #74948c01;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+  background: #fff;
+}
+
+.fs-input:focus {
+  border-color: #B35A3E;
+  outline: none;
+  box-shadow: 0 0 5px rgba(179, 90, 62, 0.5);
+}
+
+.fs-button-group {
+  width: 50%;
+  text-align: center;
+}
+
+.fs-button {
+  background: #B35A3E;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 12px;
   border: none;
-  border-radius: 4px;
-  font-size: 1em;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
 }
 
-#subscribe button:hover {
-  background-color: #B35A3E;
+.fs-button:hover {
+  background: #864E3E;
+}
+
+@media screen and (max-width: 600px) {
+  .subscribe h1 {
+    font-size: 20px;
+  }
+  .fs-form {
+    width: 90%;
+    padding: 5px;
+  }
+  .fs-button {
+    font-size: 16px;
+  }
 }
 
 /* Footer */
 footer {
   color: #FFFFFF;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 20px;
   font-size: 0.9em;
   width: 100%;
 }
 
 footer .social-nav a {
-  color: #000000;
+  color: #ffffff;
+  padding: 40px;
+  text-shadow: 0px 0px 8px #B35A3E;
+  font-size: x-large;
+  margin-top: 50px;
 }
 
 footer .social-nav a:hover {
@@ -186,14 +273,18 @@ footer .social-nav a:hover {
   text-shadow: 0px 0px 8px #FFFFFF;
 }
 
-/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .header-container {
     flex-direction: column;
     text-align: center;
   }
-
   .social-container {
     justify-content: center;
   }
+}
+.social-nav a {
+  transition: transform 0.3s ease-in-out;
+}
+.social-nav a:hover {
+  transform: scale(1.2); /* Makes icons bigger on hover */
 }

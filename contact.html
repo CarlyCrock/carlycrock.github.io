@@ -19,7 +19,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contact.css">
 </head>
+
 <title>Full Background Image</title>
 
 <body>
@@ -51,20 +53,12 @@
        
     </div>
     
-    <div class="profile-pic">
-      <img src="MessyGeneslogo.png"alt="Messy Genes" width="900px">
-    </div>
+    
   </section>
 
   <main>
-   
-   
-  </main>
-
-  <footer>
-    <div class="subscribe"<h1>SUBSCRIBE FOR EXCLUSIVE CONTENT</h1>
- </div>
-    
+    <form
+    action="https://formspree.io/f/xjkgnrdn"
     <form
   action="https://formspree.io/f/{FORM_ID}"
   class="fs-form"
@@ -72,16 +66,34 @@
   method="POST"
 >
   <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
+    <label class="fs-label" for="name">NAME</label>
+    <input class="fs-input" id="name" name="name" required />
   </div>
   <div class="fs-field">
+    <label class="fs-label" for="email">EMAIL</label>
+    <input class="fs-input" id="email" name="email" required />
+    <p class="fs-description">
+     
+    </p>
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="message">MESSAGE</label>
+    <textarea
+      class="fs-textarea"
+      id="message"
+      name="message"
+      required
+    ></textarea>
     
   </div>
   <div class="fs-button-group">
     <button class="fs-button" type="submit">Submit</button>
   </div>
 </form>
+   
+  </main>
+
+  <footer>
     <div class="social-container">
       <nav class="social-nav">
         <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
